@@ -62,15 +62,6 @@ public class Dipendente {
 
 
     //METODI
-
-    public static void stampaDatiDipendente(){
-        System.out.println("Numero matricola: "+ matricola);
-        System.out.println("Stipendio dipendente: "+ matricola);
-        System.out.println("Importo Orario Straordinario: "+ importoOrarioStraordinario);
-        System.out.println("Livello dipendente: "+ matricola);
-        System.out.println("numero matricola: "+ matricola);
-    }
-
     @Override
     public String toString() {
         return "Dipendente{" +
@@ -81,4 +72,28 @@ public class Dipendente {
                 ", Dipartimento dipendente: " + dipartimento +
                 '}';
     }
+
+    public void promuovi(){
+        if (this.livello == Livello.OPERAIO){
+            this.livello = Livello.IMPIEGATO;
+        }
+        if (this.livello == Livello.IMPIEGATO){
+            this.livello = Livello.QUADRO;
+        }
+        if (this.livello == Livello.QUADRO){
+            this.livello = Livello.DIRIGENTE;
+        }
+        if (this.livello == Livello.DIRIGENTE){
+            System.out.println("you're already the boss");
+        }
+    }
+
+
+    /*  public static void stampaDatiDipendente(){
+        System.out.println("Numero matricola: "+ matricola);
+        System.out.println("Stipendio dipendente: "+ matricola);
+        System.out.println("Importo Orario Straordinario: "+ importoOrarioStraordinario);
+        System.out.println("Livello dipendente: "+ matricola);
+        System.out.println("numero matricola: "+ matricola);
+    }*/
 }
