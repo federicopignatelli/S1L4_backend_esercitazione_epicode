@@ -43,6 +43,12 @@ public class Dipendente {
     public static void setImportoOrarioStraordinario(double importoOrarioStraordinario) {
         Dipendente.importoOrarioStraordinario = importoOrarioStraordinario;
     }
+    public Livello getLivello() {
+        return livello;
+    }
+    public Dipartimento getDipartimento() {
+        return dipartimento;
+    }
 
 
     //COSTRUTTORI
